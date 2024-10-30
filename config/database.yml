@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: deployment_exercise_production
-  username: deployment_exercise
-  password: <%= ENV["DEPLOYMENT_EXERCISE_DATABASE_PASSWORD"] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %> 
+  host: <%= ENV['DB_HOST'] %>
+  port: <%= ENV['DB_PORT'] %>
